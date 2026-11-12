@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="VYRA — the latest finds for everyday living. Discover smart, useful and conversation-starting products.">
+<title>VYRA — Discover What's Next</title>
+<style>
+:root{--ink:#171717;--muted:#777;--paper:#f7f6f2;--white:#fff;--line:#e8e6e0;--accent:#b78b55;--dark:#20211f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.announcement{background:var(--dark);color:#fff;text-align:center;padding:10px 16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+header{height:78px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;background:rgba(247,246,242,.94);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}
+.logo{font-size:25px;letter-spacing:.28em;font-weight:700}.logo span{color:var(--accent)}nav{display:flex;gap:30px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#555}
+.header-actions{display:flex;gap:16px;align-items:center}.cart-btn{border:1px solid var(--ink);background:transparent;padding:10px 15px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.cart-count{display:inline-grid;place-items:center;background:var(--ink);color:white;border-radius:50%;width:19px;height:19px;margin-left:6px;font-size:10px}
+.hero{margin:22px auto 0;width:94%;min-height:510px;background:linear-gradient(90deg,rgba(15,16,15,.72),rgba(15,16,15,.08)),url('https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=2000&q=85') center/cover;display:flex;align-items:center;color:white}
+.hero-inner{padding:8vw;max-width:720px}.eyebrow{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);font-weight:700}.hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(48px,7vw,88px);line-height:.98;letter-spacing:-.045em;margin:20px 0}.hero p{font-size:15px;line-height:1.8;color:#eee;max-width:420px}.primary{display:inline-block;background:var(--white);color:var(--ink);border:0;padding:16px 24px;margin-top:18px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin:22px auto;width:94%;border:1px solid var(--line)}.trust div{background:var(--paper);padding:19px;text-align:center;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#555}
+.section{padding:75px 6vw}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px}.section h2{font-family:Georgia,serif;font-size:clamp(34px,4vw,48px);font-weight:400;margin:10px 0 0}.section-head p{color:var(--muted);font-size:13px;max-width:320px;line-height:1.7}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin:24px 0 28px}.filter{border:1px solid #d8d5cc;background:transparent;padding:9px 14px;border-radius:30px;font-size:11px;color:#555}.filter.active{background:var(--dark);border-color:var(--dark);color:white}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.product{background:#fff;position:relative}.product-img{height:270px;overflow:hidden;background:#e9e7e1;position:relative}.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.product:hover .product-img img{transform:scale(1.04)}.tag{position:absolute;top:13px;left:13px;background:#fff;padding:7px 9px;font-size:9px;letter-spacing:.12em;text-transform:uppercase}.product-info{padding:17px}.product-type{font-size:9px;color:var(--accent);letter-spacing:.16em;text-transform:uppercase}.product h3{font-family:Georgia,serif;font-size:20px;font-weight:400;margin:8px 0}.desc{font-size:11px;line-height:1.6;color:var(--muted);min-height:36px}.price-row{display:flex;justify-content:space-between;align-items:center;margin-top:15px}.price{font-size:13px;font-weight:650}.add{border:1px solid var(--ink);background:transparent;padding:9px 11px;font-size:9px;letter-spacing:.1em;text-transform:uppercase}.add:hover{background:var(--ink);color:white}
+.story{background:#e9e6de;display:grid;grid-template-columns:1fr 1fr;min-height:380px}.story-img{background:url('https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1200&q=85') center/cover}.story-copy{padding:8%;display:flex;flex-direction:column;justify-content:center}.story-copy h2{font-family:Georgia,serif;font-size:clamp(34px,4vw,50px);font-weight:400;line-height:1.05;margin:15px 0}.story-copy p{font-size:13px;line-height:1.9;color:#666;max-width:420px}
+.newsletter{text-align:center;padding:80px 20px;background:#252622;color:white}.newsletter h2{font-family:Georgia,serif;font-size:42px;font-weight:400;margin:12px}.newsletter p{color:#c9c8c2;font-size:13px}.newsletter form{display:flex;max-width:440px;margin:25px auto 0}.newsletter input{flex:1;min-width:0;padding:15px;border:0;background:#fff}.newsletter button{background:var(--accent);border:0;padding:0 18px;color:#fff;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+footer{padding:35px 6vw;display:flex;justify-content:space-between;gap:20px;align-items:center;color:#777;font-size:10px;letter-spacing:.1em;text-transform:uppercase}.notice{font-size:10px;color:#8a887f;line-height:1.6;margin:20px 0 0}
+.cart-panel{position:fixed;inset:0 0 0 auto;width:min(420px,100%);background:white;z-index:20;box-shadow:-20px 0 60px #0002;padding:25px;transform:translateX(110%);transition:transform .3s;display:flex;flex-direction:column}.cart-panel.open{transform:translateX(0)}.cart-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}.cart-top h2{font-family:Georgia,serif;font-weight:400}.close{border:0;background:none;font-size:25px}.cart-items{flex:1;overflow:auto}.cart-line{display:flex;justify-content:space-between;gap:12px;padding:18px 0;border-bottom:1px solid var(--line);font-size:13px}.cart-line small{display:block;color:var(--muted);margin-top:5px}.remove{border:0;background:none;color:#9b6c50;font-size:11px}.cart-total{border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;font-weight:700}.checkout{background:var(--dark);color:white;border:0;padding:16px;margin-top:15px;letter-spacing:.13em;text-transform:uppercase;font-size:10px}.overlay{position:fixed;inset:0;background:#0006;z-index:15;display:none}.overlay.show{display:block}.empty{color:var(--muted);font-size:13px;padding:25px 0}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-img{height:240px}nav{gap:15px}}
+@media(max-width:600px){header{height:66px;padding:0 5vw}.logo{font-size:20px}nav{display:none}.hero{min-height:480px;background-position:58% center}.hero-inner{padding:9vw}.trust{grid-template-columns:1fr}.trust div{padding:13px}.section{padding:55px 5vw}.section-head{display:block}.section-head p{margin-top:12px}.grid{gap:10px}.product-img{height:190px}.product-info{padding:12px}.product h3{font-size:17px}.desc{font-size:10px}.add{padding:8px}.story{grid-template-columns:1fr}.story-img{min-height:250px}.newsletter form{max-width:100%}footer{display:block;line-height:2.2}}
+</style>
+</head>
+<body>
+<div class="announcement">A considered collection of everyday discoveries</div>
+<header>
+  <a class="logo" href="#">VYRA<span>.</span></a>
+  <nav><a href="#shop">Shop</a><a href="#story">Our point of view</a><a href="#newsletter">Stay in the know</a></nav>
+  <div class="header-actions"><button class="cart-btn" id="openCart">Bag <span class="cart-count" id="count">0</span></button></div>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-inner"><div class="eyebrow">The edit · 001</div><h1>Discover<br>what’s next.</h1><p>Smart finds. Fresh perspective. Thoughtful little upgrades for the way you live, work and unwind.</p><a class="primary" href="#shop">Explore the collection</a></div>
+</section>
+<div class="trust"><div>Curated discoveries</div><div>Useful by design</div><div>Fresh finds, always</div></div>
+<section class="section" id="shop">
+  <div class="section-head"><div><div class="eyebrow">The VYRA edit</div><h2>Trending, thoughtfully found.</h2></div><p>A starter collection of conversation-worthy finds. Product availability, supplier details and final prices must be confirmed before launch.</p></div>
+  <div class="filters" id="filters"><button class="filter active" data-filter="All">All finds</button><button class="filter" data-filter="Tech">Tech & everyday</button><button class="filter" data-filter="Home">Home rituals</button><button class="filter" data-filter="Travel">On the go</button><button class="filter" data-filter="Beauty">Self care</button></div>
+  <div class="grid" id="products"></div>
+  <p class="notice">Demo storefront: these sample products and prices are illustrative only. No supplier inventory, shipping promise, payment processing or live checkout is connected yet. Replace each item with a product you have vetted and can actually fulfill.</p>
+</section>
+<section class="story" id="story"><div class="story-img" role="img" aria-label="Warm, minimal home interior"></div><div class="story-copy"><div class="eyebrow">Less noise. Better finds.</div><h2>Good things earn their place.</h2><p>VYRA is a modern discovery shop for practical upgrades and little moments of delight. We look for products that feel considered, useful and worth sharing.</p></div></section>
+<section class="newsletter" id="newsletter"><div class="eyebrow">The occasional good find</div><h2>Be first to discover.</h2><p>Join the list for new edits and fresh finds.</p><form id="signup"><input type="email" required placeholder="Your email address" aria-label="Email address"><button type="submit">Join the list</button></form><p id="signupMsg" aria-live="polite"></p></section>
+</main>
+<footer><a class="logo" href="#">VYRA<span>.</span></a><span>Discover what's next.</span><span>© <span id="year"></span> VYRA Studio</span></footer>
+<div class="overlay" id="overlay"></div>
+<aside class="cart-panel" id="cart" aria-label="Shopping bag">
+  <div class="cart-top"><h2>Your bag</h2><button class="close" id="closeCart" aria-label="Close bag">×</button></div>
+  <div class="cart-items" id="cartItems"><p class="empty">Your bag is waiting for something good.</p></div>
+  <div class="cart-total"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+  <button class="checkout" id="checkout">Checkout setup required</button>
+  <p class="notice">Checkout is a demo only. Connect a payment provider and fulfillment workflow before accepting orders.</p>
+</aside>
+<script>
+const catalog=[
+{id:1,name:"Aura Ambient Lamp",type:"Home",label:"Mood maker",price:39,desc:"A soft-glow accent for slower evenings.",img:"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=85"},
+{id:2,name:"Orbit Mini Speaker",type:"Tech",label:"Everyday audio",price:49,desc:"Compact sound for desks, kitchens and weekends.",img:"https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=900&q=85"},
+{id:3,name:"Sculpt Travel Bottle",type:"Travel",label:"On the move",price:24,desc:"A clean-lined companion for daily refills.",img:"https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=900&q=85"},
+{id:4,name:"Cloud Touch Mirror",type:"Beauty",label:"Getting ready",price:34,desc:"A countertop essential for your daily routine.",img:"https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=85"},
+{id:5,name:"Foldaway Desk Stand",type:"Tech",label:"Desk reset",price:29,desc:"A simple lift for a tidier work setup.",img:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85"},
+{id:6,name:"Ritual Ceramic Set",type:"Home",label:"Slow mornings",price:42,desc:"A minimal set for coffee, tea and quiet moments.",img:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85"},
+{id:7,name:"Weekender Organizer",type:"Travel",label:"Travel smarter",price:27,desc:"Keep small essentials together on the go.",img:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85"},
+{id:8,name:"Glow Care Tool",type:"Beauty",label:"Self-care edit",price:32,desc:"A simple addition to a mindful self-care routine.",img:"https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=900&q=85"}
+];
+let bag=[];
+const money=n=>"$"+n.toFixed(2);
+function renderProducts(filter="All"){
+ const items=filter==="All"?catalog:catalog.filter(p=>p.type===filter);
+ document.getElementById("products").innerHTML=items.map(p=>`<article class="product"><div class="product-img"><img src="${p.img}" alt="${p.name}" loading="lazy"><span class="tag">${p.label}</span></div><div class="product-info"><div class="product-type">${p.type}</div><h3>${p.name}</h3><div class="desc">${p.desc}</div><div class="price-row"><span class="price">${money(p.price)}</span><button class="add" data-add="${p.id}">Add to bag</button></div></div></article>`).join("");
+}
+function renderBag(){
+ const count=bag.reduce((n,x)=>n+x.qty,0), total=bag.reduce((n,x)=>n+x.price*x.qty,0);
+ document.getElementById("count").textContent=count;document.getElementById("subtotal").textContent=money(total);
+ document.getElementById("cartItems").innerHTML=bag.length?bag.map(x=>`<div class="cart-line"><div><strong>${x.name}</strong><small>${money(x.price)} × ${x.qty}</small></div><div><strong>${money(x.price*x.qty)}</strong><br><button class="remove" data-remove="${x.id}">Remove</button></div></div>`).join(""):'<p class="empty">Your bag is waiting for something good.</p>';
+}
+function toggleCart(open){document.getElementById("cart").classList.toggle("open",open);document.getElementById("overlay").classList.toggle("show",open)}
+document.addEventListener("click",e=>{
+ const add=e.target.closest("[data-add]");if(add){const p=catalog.find(x=>x.id===Number(add.dataset.add));const found=bag.find(x=>x.id===p.id);found?found.qty++:bag.push({...p,qty:1});renderBag();add.textContent="Added";setTimeout(()=>add.textContent="Add to bag",900)}
+ const rem=e.target.closest("[data-remove]");if(rem){bag=bag.filter(x=>x.id!==Number(rem.dataset.remove));renderBag()}
+ const f=e.target.closest("[data-filter]");if(f){document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));f.classList.add("active");renderProducts(f.dataset.filter)}
+});
+document.getElementById("openCart").onclick=()=>toggleCart(true);document.getElementById("closeCart").onclick=()=>toggleCart(false);document.getElementById("overlay").onclick=()=>toggleCart(false);
+document.getElementById("checkout").onclick=()=>alert("Demo only: add verified supplier fulfillment and a payment checkout link before launch. No order or payment has been placed.");
+document.getElementById("signup").onsubmit=e=>{e.preventDefault();document.getElementById("signupMsg").textContent="Thanks! Connect an email marketing service to collect signups.";e.target.reset()};
+document.getElementById("year").textContent=new Date().getFullYear();
+renderProducts();renderBag();
+</script>
+</body></html>
